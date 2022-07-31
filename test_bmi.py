@@ -76,25 +76,25 @@ class TestBmi(unittest.TestCase):
         :return:
         """
         self.assertEqual(self.result13.compare_bmi(),
-                         ['Moderately obese', ['30 - 34.9', 'Medium risk']])
+                         ['Moderately obese', '30 - 34.9', 'Medium risk'])
         self.assertEqual(self.result14.compare_bmi(),
-                         ['Over Weight', ['25 - 29.9', 'Enhanced risk']])
+                         ['Over Weight', '25 - 29.9', 'Enhanced risk'])
         self.assertEqual(self.result15.compare_bmi(),
                          "BMI is missing or wrong format please check")
         self.assertEqual(self.result16.compare_bmi(),
                          "BMI is missing or wrong format please check")
         self.assertEqual(self.result17.compare_bmi(),
-                         ['Under Weight', ['<18.4', 'Malnutrition risk']])
+                         ['Under Weight', '<18.4', 'Malnutrition risk'])
         self.assertEqual(self.result18.compare_bmi(),
-                         ['Normal Weight', ['18.5 - 24.9', 'Low risk']])
+                         ['Normal Weight', '18.5 - 24.9', 'Low risk'])
         self.assertEqual(self.result19.compare_bmi(),
-                         ['Over Weight', ['25 - 29.9', 'Enhanced risk']])
+                         ['Over Weight', '25 - 29.9', 'Enhanced risk'])
         self.assertEqual(self.result20.compare_bmi(),
-                         ['Moderately obese', ['30 - 34.9', 'Medium risk']])
+                         ['Moderately obese', '30 - 34.9', 'Medium risk'])
         self.assertEqual(self.result21.compare_bmi(),
-                         ['Severely obese', ['35 - 39.9', 'High risk']])
+                         ['Severely obese', '35 - 39.9', 'High risk'])
         self.assertEqual(self.result22.compare_bmi(),
-                         ['Very severely obese', ['40+', 'Very high risk']])
+                         ['Very severely obese', '40+', 'Very high risk'])
 
     # Just for reference
     def test_both(self):
