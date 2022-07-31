@@ -7,21 +7,6 @@ import csv
 from decimal import Decimal
 
 
-def flatten(lis):
-    """
-    This function make multiple lists to single list and then yeilds it
-    i.e [a,[b,c,[d,e]]] -> [a,b,c,d,e]
-    :param lis: a list object
-
-    """
-    for item in lis:
-        if isinstance(item, Iterable) and not isinstance(item, str):
-            for _ in flatten(item):
-                yield _
-        else:
-            yield item
-
-
 def to_csv(data, file_name, header="", mode='w'):
     """
     To export data to csv
