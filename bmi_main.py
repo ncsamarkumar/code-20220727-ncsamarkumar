@@ -33,8 +33,8 @@ class BMI:
             bmi_value = float(bmi_value)
         except ValueError:
             return errors.BMI_MISSING
-            
-        #As per given standards limiting to single decimal.
+
+        # As per given standards limiting to single decimal.
         bmi_value = round(bmi_value, 1)
 
         # removing the trailing zeros from decimal
@@ -42,17 +42,17 @@ class BMI:
 
         # Comparing the Bmi status
         if bmi_value <= 18.4:
-            return [U_WEIGHT, STANDARDS[U_WEIGHT]]
+            return [U_WEIGHT]+STANDARDS[U_WEIGHT]
         if 18.5 < bmi_value <= 24.9:
-            return [N_WEIGHT, STANDARDS[N_WEIGHT]]
+            return [N_WEIGHT]+STANDARDS[N_WEIGHT]
         if 25 < bmi_value <= 29.9:
-            return [O_WEIGHT, STANDARDS[O_WEIGHT]]
+            return [O_WEIGHT]+STANDARDS[O_WEIGHT]
         if 30 < bmi_value <= 34.9:
-            return [M_OBESE, STANDARDS[M_OBESE]]
+            return [M_OBESE]+STANDARDS[M_OBESE]
         if 35 < bmi_value <= 39.9:
-            return [S_OBESE, STANDARDS[S_OBESE]]
+            return [S_OBESE]+STANDARDS[S_OBESE]
 
-        return [VS_OBESE, STANDARDS[VS_OBESE]]
+        return [VS_OBESE]+STANDARDS[VS_OBESE]
 
     def to_calculate_bmi(self):
 
