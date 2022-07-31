@@ -105,7 +105,7 @@ class TestBmi(unittest.TestCase):
         result = self.result1.to_calculate_bmi()
         self.assertEqual(result, 30.37)
         self.assertEqual(self.result1.compare_bmi(),
-                         ['Moderately obese', ['30 - 34.9', 'Medium risk']])
+                         ['Moderately obese', '30 - 34.9', 'Medium risk'])
 
 
 if __name__ == '__main__':
