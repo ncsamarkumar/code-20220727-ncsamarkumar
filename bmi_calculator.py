@@ -10,7 +10,7 @@ from constants import HEADER,GENDER,RESULT,HEIGHTCM,WEIGHTKG
 
 if __name__ == "__main__":
 
-    FILE_PATH = 'bmi' #Declare file Path
+    FILE_PATH = 'data_output' #Declare file Path
 
     with open('data.json', 'r', encoding='utf-8') as data_obj:
         data = data_obj.read()
@@ -32,10 +32,9 @@ if __name__ == "__main__":
             bmi_cate = [
                         arr.get(GENDER),str(arr.get(HEIGHTCM)),
                         str(arr.get(WEIGHTKG)),str(bmi_value),
-                        bmi_status
                         ]
 
-            data_to_csv.append(list(utils.flatten(bmi_cate)))
+            data_to_csv.append(bmi_cate+bmi_status)
 
     if data_to_csv:
         utils.to_csv(data_to_csv, FILE_PATH, HEADER, 'w')
